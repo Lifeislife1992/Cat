@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Урок с котом</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript">
+        function helloText() {
+            var sayYourName = prompt("Как тебя зовут?", "Введите Ваше имя.");
+            if (sayYourName) {
+                document.getElementById("catNormal").src = "image/2.png";
+                alert("Привет," + sayYourName + ". Приятно познакомиться!");
+            }
+        }
+
+        function sadCat() {
+            document.getElementById('catNormal').src = 'image/3.png';
+        }
+
+        function reloadPage() {
+            location.reload();
+        }
+
+        function askWhereAreYou() {
+            alert("Ты где?");
+        }
+
+        setTimeout(sadCat, 7*1000);
+        setTimeout(askWhereAreYou, 10*1000);
+        setInterval(reloadPage, 5*1000);
+    </script>
+</head>
+<body onload="alert('Привет, я твой друг кот!')">
+    <div onclick="helloText()">
+        <img src="image/1.png" id="catNormal">
+    </div>
+</body>
+</html>

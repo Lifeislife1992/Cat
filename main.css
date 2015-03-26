@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+div{
+    width: 116px;
+    margin: 100px auto;
+    transform: scale(2);
+}
