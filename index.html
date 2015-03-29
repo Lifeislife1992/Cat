@@ -25,14 +25,24 @@
             alert("Ты где?");
         }
 
+        function stopReloadPage() {
+            clearInterval(pageRefresh);
+        }
         setTimeout(sadCat, 7*1000);
         setTimeout(askWhereAreYou, 10*1000);
-        setInterval(reloadPage, 5*1000);
+        var pageRefresh = setInterval(reloadPage, 5*1000);
+
+        function resizeCat() {
+            document.getElementById("catNormal").style.height = document.body.clientHeight * 0.2;
+        }
     </script>
 </head>
-<body onload="alert('Привет, я твой друг кот!')">
+<body onload="resizeCat(); alert('Привет, я твой друг кот!')">
     <div onclick="helloText()">
         <img src="image/1.png" id="catNormal">
+    </div>
+    <div>
+        <input type="button" id="Stop" value="Stop Refresh" onclick="stopReloadPage()">
     </div>
 </body>
 </html>

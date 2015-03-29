@@ -8,5 +8,7 @@ body{
 div{
     width: 116px;
     margin: 100px auto;
-    transform: scale(2);
+}
+input[type="button"]{
+    font-size: 14px;
 }
