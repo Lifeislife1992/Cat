@@ -12,3 +12,6 @@ div{
 input[type="button"]{
     font-size: 14px;
 }
+input:last-child{
+    margin-top: 10px;
+}
